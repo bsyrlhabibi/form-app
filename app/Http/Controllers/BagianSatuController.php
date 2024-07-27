@@ -23,7 +23,19 @@ class BagianSatuController extends Controller
             'kebangsaan' => 'required|string|max:255',
             'alamat_rumah' => 'required|string',
             'kode_pos' => 'required|string|max:10',
-            'no_telepon' => 'required|string|max:15',
+            'no_rumah' => 'required|string|max:15',
+            'no_hp' => 'required|string|max:15',
+            'no_kantor' => 'required|string|max:15',
+            'email' => 'required|string|max:30',
+            'kualifikasi_pendidikan' => 'required|string|max:30',
+            'nama_institusi' => 'required|string|max:255',
+            'jabatan' => 'required|string|max:255',
+            'alamat_kantor' => 'required|string',
+            'kode_pos_kantor' => 'required|string|max:10',
+            'no_telp' => 'required|string|max:15',
+            'fax' => 'required|string|max:15',
+            'email_kantor' => 'required|string|max:30',
+            
         ]);
 
         Bagiansatu::create($validatedData);

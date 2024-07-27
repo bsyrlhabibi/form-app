@@ -20,7 +20,6 @@
         }
         .label {
             display: table-cell;
-            font-weight: bold;
             width: 200px; /* Lebar label */
             padding-right: 10px; /* Jarak antara label dan tanda titik dua */
             vertical-align: top; /* Menyelaraskan teks di bagian atas */
@@ -39,25 +38,121 @@
             vertical-align: bottom; /* Menyelaraskan teks di bagian bawah */
             width: calc(100% - 200px - 10px); /* Menyesuaikan lebar untuk sisa ruang */
         }
+        .sub-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .sub-table td {
+            padding: 5px;
+            border-bottom: 1px solid #000; /* Garis bawah di setiap sel */
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Data Bagian Satu</h1>
+        <p><strong>FR.APL.01. PERMOHONANAN SERTIFIKASI KOMPETENSI</strong></p>
+        <p></p>
+        <p><strong>Bagian 1 : Rincian Data Permohonan Sertifikasi </strong></p>
+        <p>Pada bagian ini, cantumkan data pribadi, data pendidikan forma serta data pekerjaan anda pada saat ini.</p>
+        <p><strong>a. Data Pribadi</strong></p>
         <div class="row">
-            <span class="label">Nama Lengkap</span>
+            <span class="label">Nama lengkap</span>
             <span class="label2">:</span>
             <span class="value">{{ $data->nama_lengkap }}</span>
         </div>
         <div class="row">
-            <span class="label">No. KTP</span>
+            <span class="label">No. KTP/NIK/Paspor</span>
             <span class="label2">:</span>
             <span class="value">{{ $data->no_ktp }}</span>
         </div>
         <div class="row">
-            <span class="label">Tempat/Tanggal Lahir</span>
+            <span class="label">Tempat / tgl. Lahir</span>
             <span class="label2">:</span>
             <span class="value">{{ $data->tempat_tanggal_lahir }}</span>
+        </div>
+        <div class="row">
+            <span class="label">Jenis kelamin</span>
+            <span class="label2">:</span>
+            <span class="value">{{ $data->jenis_kelamin }}</span>
+        </div>
+        <div class="row">
+            <span class="label">Kebangsaan</span>
+            <span class="label2">:</span>
+            <span class="value">{{ $data->kebangsaan }}</span>
+        </div>
+        <div class="row">
+            <span class="label">Alamat rumah</span>
+            <span class="label2">:</span>
+            <table class="sub-table">
+                <tr>
+                    <td class="value inline">{{ $data->alamat_rumah }}</td>
+                    <td class="label inline" style="width: auto;">Kode pos:</td>
+                    <td class="value inline">{{ $data->kode_pos }}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="row">
+            <span class="label">No. Telepon/HP</span>
+            <span class="label2">:</span>
+            <table class="sub-table">
+                <tr>
+                    <td class="label inline" style="width: auto;">Rumah:</td>
+                    <td class="value inline">{{ $data->no_rumah }}</td>
+                    <td class="label inline" style="width: auto;">HP:</td>
+                    <td class="value inline">{{ $data->no_hp }}</td>
+                </tr>
+                <tr>
+                    <td class="label inline" style="width: auto;">Kantor:</td>
+                    <td class="value inline">{{ $data->no_kantor }}</td>
+                    <td class="label inline" style="width: auto;">Email:</td>
+                    <td class="value inline">{{ $data->email }}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="row">
+            <span class="label">Kualifikasi Pendidikan *Coret yang tidak perlu</span>
+            <span class="label2">:</span>
+            <span class="value">{{ $data->kualifikasi_pendidikan }}</span>
+        </div>
+        <p><strong>b. Data Pekerjaan Sekarang</strong></p>
+        <div class="row">
+            <span class="label">Nama Institusi/Perusahaan</span>
+            <span class="label2">:</span>
+            <span class="value">{{ $data->nama_institusi }}</span>
+        </div>
+        <div class="row">
+            <span class="label">Jabatan</span>
+            <span class="label2">:</span>
+            <span class="value">{{ $data->jabatan }}</span>
+        </div>
+        <div class="row">
+            <span class="label">Alamat Kantor</span>
+            <span class="label2">:</span>
+            <table class="sub-table">
+                <tr>
+                    <td class="value inline">{{ $data->alamat_kantor }}</td>
+                    <td class="label inline" style="width: auto;">Kode pos:</td>
+                    <td class="value inline">{{ $data->kode_pos_kantor }}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="row">
+            <span class="label">No. Telp/Fax/E-mail</span>
+            <span class="label2">:</span>
+            <table class="sub-table">
+                <tr>
+                    <td class="label inline" style="width: auto;">Telp:</td>
+                    <td class="value inline">{{ $data->no_telp }}</td>
+                    <td class="label inline" style="width: auto;">Fax:</td>
+                    <td class="value inline">{{ $data->fax }}</td>
+                </tr>
+                <tr>
+                    <td class="label inline" style="width: auto;">Email:</td>
+                    <td class="value inline">{{ $data->email_kantor }}</td>
+                    <td class="label inline" style="width: auto;"></td>
+                    <td class="value inline"></td>
+                </tr>
+            </table>
         </div>
     </div>
 </body>

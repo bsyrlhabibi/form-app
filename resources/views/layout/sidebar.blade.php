@@ -39,19 +39,31 @@
                 <li class="nav-item">
                     <a href="{{ route('bagiansatu.showForm') }}" class="nav-link {{ Request::is('form') ? 'active' : '' }}">
                         <i class="nav-icon far fa-circle text-danger"></i>
-                        <p class="text">Important</p>
+                        <p class="text">Permohonan Sertifikasi</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('viewdata.index') }}" class="nav-link {{ Request::is('warning-route') ? 'active' : '' }}">
+                    <a href="{{ route('show.data') }}" class="nav-link {{ Request::is('warning-route') ? 'active' : '' }}">
                         <i class="nav-icon far fa-circle text-warning"></i>
-                        <p>Warning</p>
+                        <p>Data Perhomonan</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link {{ Request::is('informational-route') ? 'active' : '' }}">
+                    <a href="{{ route('certification-form.create') }}" class="nav-link {{ Request::is('informational-route') ? 'active' : '' }}">
                         <i class="nav-icon far fa-circle text-info"></i>
-                        <p>Informational</p>
+                        <p>Sertifikasi</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('certification-form.index') }}" class="nav-link {{ Request::is('warning-route') ? 'active' : '' }}">
+                        <i class="nav-icon far fa-circle text-warning"></i>
+                        <p>Data Sertifikasi</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('certifications.create') }}" class="nav-link {{ Request::is('warning-route') ? 'active' : '' }}">
+                        <i class="nav-icon far fa-circle text-warning"></i>
+                        <p>Data Sertifikasi</p>
                     </a>
                 </li>
             </ul>

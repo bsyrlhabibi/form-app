@@ -20,7 +20,31 @@ return new class extends Migration
             $table->string('kebangsaan');
             $table->text('alamat_rumah');
             $table->string('kode_pos');
-            $table->string('no_telepon');
+            $table->string('no_rumah');
+            $table->string('no_hp');
+            $table->string('no_kantor');
+            $table->string('email');
+            $table->string('kualifikasi_pendidikan');
+            $table->string('nama_institusi');
+            $table->string('jabatan');
+            $table->string('alamat_kantor');
+            $table->string('kode_pos_kantor');
+            $table->string('no_telp');
+            $table->string('fax');
+            $table->string('email_kantor');
+
+            $table->string('judul');
+            $table->string('nomor');
+            $table->text('tujuan_asesmen');
+
+
+            $table->string('kode_unit');
+            $table->string('judul_unit');
+            $table->text('standar_kompetensi_kerja');
+
+            $table->boolean('memenuhi_syarat')->nullable();
+            $table->boolean('tidak_memenuhi_syarat')->nullable();
+            $table->string('tidakada')->nullable();
             $table->timestamps();
         });
     }
